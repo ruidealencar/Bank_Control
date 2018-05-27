@@ -1,0 +1,42 @@
+<div class="page-header">
+    <%= link_to new_agency_path, class: 'btn btn-primary' do %>
+        <span class="glyphicon glyphicon-plus"></span> New Agency
+        <% end %>
+            <h1>Listing agencies</h1>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-striped table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Agency number</th>
+                <th>Address</th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <% content_tag_for(:tr, @agencies) do |agency| %>
+                <tr>
+                    <td>
+                        <%= agency.agency_number %>
+                    </td>
+                    <td>
+                        <%= agency.address %>
+                    </td>
+                    <td>
+                        <%= link_to 'Show', agency %>
+                    </td>
+                    <td>
+                        <%= link_to 'Edit', edit_agency_path(agency) %>
+                    </td>
+                    <td>
+                        <%= link_to 'Destroy', agency, method: :delete, data: { confirm: 'Are you sure?' } %>
+                    </td>
+                </tr>
+                <% end %>
+        </tbody>
+    </table>
+</div>
