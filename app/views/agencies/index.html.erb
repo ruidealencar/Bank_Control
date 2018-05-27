@@ -18,7 +18,7 @@
         </thead>
 
         <tbody>
-            <% content_tag_for(:tr, @agencies) do |agency| %>
+            <% @agencies.each do |agency| %>
                 <tr>
                     <td>
                         <%= agency.agency_number %>
