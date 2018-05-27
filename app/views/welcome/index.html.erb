@@ -1,2 +1,10 @@
-<h1>Welcome Bank Control</h1>
-<p class="lead">What do you want to do? </p>
+<div class="page-header">
+    <%= link_to destroy_user_session_path, method: :delete, class: 'btn btn-primary' do %>
+        <span class=""></span> Sign out
+        <% end %>
+            <div class="page-header">
+                <%= link_to new_user_session_path, class: 'btn btn-primary' do %>
+                    <span class=""></span> Sign in
+                    <% end %>
+                        <h1>Welcome Bank Control</h1>
+                        <p class="lead">What do you want to do? </p>
