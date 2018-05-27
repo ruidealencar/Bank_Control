@@ -1,4 +1,4 @@
 class Agency < ApplicationRecord
-    has_many :account
+    validates :agency_number, :address, presence: true
 end
 

@@ -3,10 +3,10 @@
         <div class="alert alert-danger alert-dismissable" role="alert">
             <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
             <h4>
-                <%= pluralize(agency.errors.count, "error") %> prohibited this agency from being saved:</h2>
+                <%= pluralize(@agency.errors.count, "error") %> prohibited this agency from being saved:</h2>
 
                     <ul>
-                        <% agency.errors.full_messages.each do |message| %>
+                        <% @agency.errors.full_messages.each do |message| %>
                             <li>
                                 <%= message %>
                             </li>

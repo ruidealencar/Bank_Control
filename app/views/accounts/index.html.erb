@@ -19,25 +19,27 @@
         </thead>
 
         <tbody>
-            <%= content_tag_for(:tr, @accounts) do |account| %>
-                <td>
-                    <%= account.agency %>
-                </td>
-                <td>
-                    <%= account.account_number %>
-                </td>
-                <td>
-                    <%= account.balance %>
-                </td>
-                <td>
-                    <%= link_to 'Show', account %>
-                </td>
-                <td>
-                    <%= link_to 'Edit', edit_account_path(account) %>
-                </td>
-                <td>
-                    <%= link_to 'Destroy', account, method: :delete, data: { confirm: 'Are you sure?' } %>
-                </td>
+            <% @accounts.each do |account| %>
+                <tr>
+                    <td>
+                        <%= account.agency %>
+                    </td>
+                    <td>
+                        <%= account.account_number %>
+                    </td>
+                    <td>
+                        <%= account.balance %>
+                    </td>
+                    <td>
+                        <%= link_to 'Show', account %>
+                    </td>
+                    <td>
+                        <%= link_to 'Edit', edit_account_path(account) %>
+                    </td>
+                    <td>
+                        <%= link_to 'Destroy', account, method: :delete, data: { confirm: 'Are you sure?' } %>
+                    </td>
+                </tr>
                 <% end %>
         </tbody>
     </table>
