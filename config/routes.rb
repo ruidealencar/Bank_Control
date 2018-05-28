@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :releases
   devise_for :users
   resources :accounts
   resources :agencies

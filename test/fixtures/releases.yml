@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  account: one
+  release_type: MyString
+  value: 9.99
+
+two:
+  account: two
+  release_type: MyString
+  value: 9.99

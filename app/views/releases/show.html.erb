@@ -1,0 +1,23 @@
+<div class="page-header">
+  <%= link_to releases_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to edit_release_path(@release), class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+  <% end %>
+  <h1>Show release</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Account:</dt>
+  <dd><%= @release.account %></dd>
+
+  <dt>Release type:</dt>
+  <dd><%= @release.release_type %></dd>
+
+  <dt>Value:</dt>
+  <dd><%= @release.value %></dd>
+
+</dl>
