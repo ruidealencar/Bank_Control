@@ -72,4 +72,5 @@ class ReleasesController < ApplicationController
       params.require(:release).permit(:account_id, :release_type, :value, :account_number)
       
     end
+    
 end
