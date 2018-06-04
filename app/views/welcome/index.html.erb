@@ -1,13 +1,14 @@
-<div class="">
+<div>
     <h1>Welcome Bank Control</h1>
     
     <% if user_signed_in? %>
         <p><%= current_user.email %></p>
         <%= link_to destroy_user_session_path, method: :delete, class: 'btn btn-default' do %>
-            <span class=""></span> Sign out
-        <% end %>       
+            <span></span> Sign out
+        <% end %>  
+
     <% else %>
         <%= link_to new_user_session_path, class: 'btn btn-primary' do %>
-            <span class=""></span> Sign in
+            <span></span> Sign in
         <% end %>
     <% end %>
